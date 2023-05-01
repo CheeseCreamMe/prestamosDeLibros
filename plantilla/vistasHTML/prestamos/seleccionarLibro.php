@@ -24,7 +24,9 @@ if ($libros) {
                     <td><?php echo $libro["autor"] ?></td>
 
                     <td>
-                        <a href="?idLibro=<?php echo $libro["idLibro"] ?>nombreLibro=<?php echo $libro["titulo"] ?>">Seleccionar</a>
+                    <form method="post">
+                        <button class="btn btn-primary" value="<?php echo $libro["idLibro"] ?>" name=Libro>Botón de Bootstrap</button>
+                        </form>
                     </td>
                 </tr>
             <?php } ?>

@@ -55,7 +55,7 @@
                         <li class="nav-item"><a class="nav-link active" href="Libros"><i class="bi bi-book"></i>
                                 Libros</a></li>
                         <li class="nav-item"><a class="nav-link active" href="Prestamos"><i class="bi bi-book"></i>
-                                Agregar Prestamo</a></li>
+                                Prestamos</a></li>
 
                     </ul>
                 </div>
