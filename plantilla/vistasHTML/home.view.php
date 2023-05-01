@@ -13,6 +13,7 @@
         z-index: -1;
     }
 </style>
+<!--esta seccion de codigo es la que se ejecuta por defecto-->
 <section id="sect1" class="sect">
  <img class="background" src="https://www.xtrafondos.com/wallpapers/jinx-arcane-9286.jpg" alt="">
     <div class="card my-5 mx-auto w-50"style="background:none ;">
@@ -43,4 +44,3 @@
     </div>
 </section>
 
-<!--esta seccion de codigo es la que se ejecuta por defecto-->

@@ -30,7 +30,7 @@ if (isset($_POST['ok'])) {
         $autor = $_POST['autor'];
         $editorial = $_POST['editorial'];
         $fecha = $_POST['fecha'];
-        $isbn = $_POST['isbn'];
+        $isbm = $_POST['isbm'];
         $borrar = $crud->editar($idLibro, $titulo, $autor, $editorial, $fecha, $isbm);
         if ($borrar != false) {
             echo '<script>alert("Se ha editado correctamente la escuela ");</script>';
@@ -64,8 +64,8 @@ if (isset($_POST['ok'])) {
                 <input placeholder="Fecha de publicación" class="form-control" name=fecha id=fecha type=date value="<?php echo $libro[0]['fecha'] ?>" required>
             </div>
             <div class="form-group">
-                <label for="isbn">ISBN</label>
-                <input placeholder="ISBM" class="form-control" name=isbn id=isbn type=text value="<?php echo $libro[0]['ISBM'] ?>" required>
+                <label for="isbm">isbm</label>
+                <input placeholder="ISBM" class="form-control" name=isbm id=isbm type=text value="<?php echo $libro[0]['ISBM'] ?>" required>
             </div>
             <button class="btn btn-success" name=cancelar>cancelar</button>
             <button class="btn btn-success" name="ok">Guardar</button>

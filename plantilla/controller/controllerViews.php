@@ -47,6 +47,14 @@ class controllerViews
     {
         require_once(__DIR__ . '/../vistasHTML/Alumnos/eliminar.editar.php');
     }
+    public function Prestamos()
+    {
+        require_once(__DIR__ . '/../vistasHTML/prestamos/add.php');
+    }
+    public function editarPrestamos()
+    {
+        require_once(__DIR__ . '/../vistasHTML/Alumnos/eliminar.editar.php');
+    }
     public function Error()
     {
         require_once(__DIR__ . '/../core/pagina404.php');

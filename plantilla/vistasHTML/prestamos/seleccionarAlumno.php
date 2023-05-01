@@ -32,17 +32,12 @@ if ($alumnos) {
                     <td>
                         <?php echo $alumno["apellidos"] ?>
                     </td>
-                    <td>
-                        <?php echo $alumno["direccion"] ?>
-                    </td>
+
                     <td>
                         <?php echo $alumno["idCarreraAlumno"] ?>
                     </td>
                     <td>
-                        <?php echo $alumno["telefonos"] ?>
-                    </td>
-                    <td>
-                        <a href="editarAlumnos?id=<?php echo $alumno["idAlumno"] ?>">Editar</a>
+                        <a href="?id=<?php echo $alumno["idAlumno"] ?>">Seleccionar</a>
                     </td>
                 </tr>
             <?php } ?>
