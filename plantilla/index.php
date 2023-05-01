@@ -37,23 +37,39 @@
                                     class="bi bi-house-door-fill"></i>Home</a></li>
                         <li class=nav-item>
                             <div class="dropdown">
-                                <a class="nav-link active" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                            Registro
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                <li class="dropdown-item "><a class="nav-link active" href="alumnos"><i
-                                            class="bi bi-person-square"></i> Alumnos</a></li>
-                                <li class="dropdown-item "><a class="nav-link active" href="escuelas"><i
-                                            class="bi bi-hospital"></i> escuelas</a></li>
-                                <li class="dropdown-item "><a class="nav-link active" href="carreras"><i
-                                            class="bi bi-window-dash"></i> Carreras</a></li>
-                            </ul>
+                                <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Registro
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item "><a class="nav-link active" href="escuelas"><i
+                                                class="bi bi-hospital"></i> escuelas</a></li>
+                                    <li class="dropdown-item "><a class="nav-link active" href="carreras"><i
+                                                class="bi bi-window-dash"></i> Carreras</a></li>
+                                    <li class="dropdown-item "><a class="nav-link active" href="alumnos"><i
+                                                class="bi bi-person-square"></i> Alumnos</a></li>
+                                </ul>
                             </div>
                         </li>
 
                         <li class="nav-item"><a class="nav-link active" href="Libros"><i class="bi bi-book"></i>
                                 Libros</a></li>
+                        <li class=nav-item>
+                            <div class="dropdown">
+                                <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Prestamos
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item "><a class="nav-link active" href="prestamos"><i
+                                                class="bi bi-plus-circle-fill"></i> Agregar</a></li>
+                                    <li class="dropdown-item "><a class="nav-link active" href="carreras"><i
+                                                class="bi bi-window-dash"></i> Carreras</a></li>
+                                    <li class="dropdown-item "><a class="nav-link active" href="alumnos"><i
+                                                class="bi bi-person-square"></i> Alumnos</a></li>
+                                </ul>
+                            </div>
+                        </li>
 
                     </ul>
                 </div>

@@ -21,12 +21,22 @@ apellidos VARCHAR(50),
 direccion VARCHAR(250),
 telefonos VARCHAR(250),
 FOREIGN KEY(idCarreraAlumno) REFERENCES carreras(idCarrera)
-)
+);
 CREATE TABLE libros(
-idLibro Int(11) INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+idLibro Int(11)  NOT NULL AUTO_INCREMENT PRIMARY KEY,
 titulo varchar(100),
 autor varchar(100),
 editorial varchar(100),
 fecha date,
-ISBM varchar(100),
+ISBM varchar(100)
+);
+CREATE TABLE prestamos(
+idPrestamo INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+idAlumno INT,
+idLibro INT,
+fechaPrestamo DATE,
+fechaDevolucion DATE,
+estado INT,
+FOREIGN KEY(idAlumno) REFERENCES alumnos(idAlumno),
+FOREIGN KEY(idLibro) REFERENCES libros(idLibro)
 )

@@ -2,7 +2,30 @@
 require_once(__DIR__ . '/../../sqlconect/alumnos/alumnos.crud.php');
 $crud = new Alumnos();
 $alumno[] = $crud->buscarPorId($_GET['id']);
-print_r($alumno);
+//print_r($alumno);
+if (isset($_POST['eliminar'])) {
+    try {
+    $idEscuela = $_GET['id'];
+    $borrar = $crud->eliminar($idEscuela);
+    if ($borrar != false) {
+    echo '<script>alert("Se ha elimina el alumno");</script>';
+    header('Location: http://localhost/plantilla/Alumnos');
+    exit;
+    }
+    } catch (\Throwable $th) {
+    echo "Upps parece que no puedes hacer esto<br>
+    intente verificar que
+    <ul>
+    <li>no se ha borrado anteriormente el alumno</li>
+    <li>no existan carreras ligadas a el alumno</li>
+    <li>no existan prestramos ligados a  el alumno/li>
+    </ul>";
+    }
+    }
+    if (isset($_POST['cancelar'])) {
+    header('Location: http://localhost/plantilla/Alumnos');
+    exit;
+    }
 ?>
 <div class="row">
     <div class="col-12">
@@ -42,33 +65,17 @@ print_r($alumno);
                 <label for="telefonos">telefono</label>
                 <input placeholder="telefono" class="form-control" type="text" name="telefonos" id="telefonos" value="<?php echo $alumno[0]['telefonos'] ?>" required>
             </div>
-            <div class="form-group"><button class="btn btn-success" name=ok>Guardar</button></div>
+            <div class="form-group">
+                <button class="btn btn-success" name=ok>Guardar</button>
+                <button class="btn btn-success" name=eliminar>Eliminar</button>
+                <button class="btn btn-success" name=cancelar>Cancelar</button>
+            </div>
+            
     </div>
 </div>
 <?php
 /*
-if (isset($_POST['eliminar'])) {
-try {
-$idEscuela = $_GET['id'];
-$borrar = $crud->eliminar($idEscuela);
-if ($borrar != false) {
-echo '<script>alert("Se ha eliminado la escuela");</script>';
-exit;
-}
-} catch (\Throwable $th) {
-echo "Upps parece que no puedes hacer esto<br>
-intente verificar que
-<ul>
-<li>no se ha borrado anteriormente esta escuela</li>
-<li>no existan carreras ligadas a esta escuela</li>
-<li>no existan alumnos ligados a esta escuela</li>
-</ul>";
-}
-}
-if (isset($_POST['cancelar'])) {
-header('Location: http://localhost/plantilla/Carreras');
-exit;
-}
+
 if (isset($_POST['ok'])) {
 $nombre = $_POST['nombre'];
 $idEscuelaCarrera = $_POST['idEscuelaCarrera'];
