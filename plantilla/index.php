@@ -31,32 +31,32 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"><a class="nav-link active" id=theme style="cursor:pointer;"><i
-                                    class="bi bi-brightness-high"></i>Cambiar modo</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="home"><i
                                     class="bi bi-house-door-fill"></i>Home</a></li>
-                        <li class=nav-item>
-                            <div class="dropdown">
-                                <a class="nav-link active" type="button" id="triggerId" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    Registro
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-item "><a class="nav-link active" href="alumnos"><i
-                                                class="bi bi-person-square"></i> Alumnos</a></li>
-                                    <li class="dropdown-item "><a class="nav-link active" href="escuelas"><i
-                                                class="bi bi-hospital"></i> escuelas</a></li>
-                                    <li class="dropdown-item "><a class="nav-link active" href="carreras"><i
-                                                class="bi bi-window-dash"></i> Carreras</a></li>
-                                </ul>
-                            </div>
+                                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Registro
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Escuelas">Escuelas</a></li>
+                                <li><a class="dropdown-item" href="Carreras">Carreras</a></li>
+                                <li><a class="dropdown-item" href="Alumnos">Alumnos</a></li>
+                            </ul>
                         </li>
-
-                        <li class="nav-item"><a class="nav-link active" href="Libros"><i class="bi bi-book"></i>
-                                Libros</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="Prestamos"><i class="bi bi-book"></i>
-                                Agregar Prestamo</a></li>
-
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Biblioteca
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Libros">Libros</a></li>
+                                <li><a class="dropdown-item" href="Prestamos">Prestamos</a></li>
+                                <li><a class="dropdown-item" href="#">Historial</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" id=theme style="cursor:pointer;"><i
+                                    class="bi bi-brightness-high"></i>change mode</a></li>
                     </ul>
                 </div>
             </div>
@@ -86,10 +86,10 @@
         const htmlTag = document.querySelector("html");
         if (htmlTag.getAttribute("data-bs-theme") === "dark") {
             htmlTag.removeAttribute("data-bs-theme");
-            themeBtn.innerHTML = '<i class="bi bi-brightness-high-fill"></i>cambiar modo';
+            themeBtn.innerHTML = '<i class="bi bi-brightness-high-fill"></i>change mode';
         } else {
             htmlTag.setAttribute("data-bs-theme", "dark");
-            themeBtn.innerHTML = '<i class="bi bi-brightness-high"></i>cambiar modo';
+            themeBtn.innerHTML = '<i class="bi bi-brightness-high"></i>change mode';
         }
     });
 
