@@ -1,5 +1,15 @@
 <?php
 require_once(__DIR__ . '/../../sqlconect/prestamos/prestamos.crud.php');
+$libro;
+$alumno;
+if (isset($_POST['Libro'])) {
+    $libro = $_POST['Libro'];
+    echo "este seria el id del libro: " . $libro;
+}
+if (isset($_POST['alumn'])) {
+    $alumno = $_POST['alumn'];
+    echo "este seria el id del alumno: " . $alumno;
+}
 
 $agregar = false;
 $crud = new Prestamos();
@@ -61,13 +71,19 @@ if (isset($_POST['ok'])) {
         </div>
     </div>
     <div class="row">
-<!--         <label for="tipo" class="form-label">Seleccionar:</label>
+        <!--         <label for="tipo" class="form-label">Seleccionar:</label>
         <select id="tipo" name="tipo" class="form-select">
             <option value="libro">Seleccionar libros</option>
             <option value="alumno">Seleccionar Alumnos</option>
         </select> -->
-        <?php require_once(__DIR__."/seleccionarLibro.php"); ?>
-        <?php require_once(__DIR__."/seleccionarAlumno.php"); ?>
+        <div class=col>
+            <?php require_once(__DIR__ . "/seleccionarLibro.php"); ?>
+        </div>
+        <div class=col>
+            <?php require_once(__DIR__ . "/seleccionarAlumno.php"); ?>
+        </div>
+
+
     </div>
 
 </div>

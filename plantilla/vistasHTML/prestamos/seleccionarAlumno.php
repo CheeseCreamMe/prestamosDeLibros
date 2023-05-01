@@ -13,10 +13,8 @@ if ($alumnos) {
                 <th>ID</th>
                 <th>Nombres</th>
                 <th>Apellidos</th>
-                <th>direccion</th>
                 <th>Carreras</th>
-                <th>Telefonos</th>
-                <th>Más</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -37,7 +35,9 @@ if ($alumnos) {
                         <?php echo $alumno["idCarreraAlumno"] ?>
                     </td>
                     <td>
-                        <a href="?id=<?php echo $alumno["idAlumno"] ?>">Seleccionar</a>
+                        <form method="post">
+                        <button class="btn btn-primary" value="<?php echo $alumno["idAlumno"] ?>" name=alumn>Botón de Bootstrap</button>
+                        </form>
                     </td>
                 </tr>
             <?php } ?>
@@ -48,3 +48,14 @@ if ($alumnos) {
     echo "No se encontraron resultados.";
 }
 ?>
+<div class="container">
+    <div class="row">
+        <div class='col'>
+            <?php
+            if (isset($_POST['alumn'])) {
+                print_r($_POST['alumn']);
+            }
+            ?>
+        </div>
+    </div>
+</div>
